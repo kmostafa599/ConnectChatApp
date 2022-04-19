@@ -22,37 +22,55 @@ body {
   flex-direction: column;
 }
 
-/* .App {
-  display: grid; 
-  grid-template-columns: 1fr 0fr 0fr; 
-  grid-template-rows: 0.2fr 1.97fr 0.1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    ". . ."
-    ". . ."
-    ". . ."; 
-} */
 
+main {
+  /* margin-top: 2rem; */
+  min-height: 49.2rem;
+  padding: 1rem 0.5rem;
+}
+
+
+.App-header{
+  display: none;
+}
+
+@media (min-width: 550px){
+
+  .App {
+    min-height: 41rem;
+  }
+
+  .App-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  }
+
+  main {
+    min-height: 49.5rem;
+  }
+
+  
+}
 /* ------header styling--------- */
 
-.App-header {
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
   background-color: var(--dkBlue);
   color: white;
-  width: 100%;
+  width: 97%;
   display: flex;
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
   position: fixed;
   margin-top: 2.85rem;
-}
-
-
-.header-container {
-  display: flex;
-  margin-left: 1.5rem;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
+  z-index: 6;
+  padding-left: 3rem;
+  padding-top: 0.5rem;
 }
 
 .header-logo{
@@ -88,3 +106,83 @@ body {
   background-color: var(--dkBlue);
   width: 100%;
 }
+/* --------------------------- */
+/* ------ChatPage styling------- */
+
+
+
+/* --------------------------- */
+/* ------Contacts styling------- */
+
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  left: 0;
+  right: 0;
+  max-height: 46rem;
+  position: fixed;
+  margin-top: 4rem;
+}
+
+.contacts-title {
+  display: none;
+}
+
+.contacts-scroll {
+  overflow: hidden;
+  overflow-y: scroll;
+  direction: rtl;
+  padding: 1rem;
+}
+
+.contacts-list {
+  list-style: none;
+  scrollbar-color: var(--backGround) var(--ltBlue);
+  text-align: left;
+  padding-left: 1.2rem;
+}
+
+.contacts-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  background-color: var(--dkBlue);
+  color: white;
+  width: 89%;
+  display: flex;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  position: fixed;
+  z-index: 6;
+  padding-left: 3rem;
+  padding-top: 0.5rem;
+  top: 0px;
+}
+
+@media (min-width: 550px){
+  .contacts-container{
+    border-radius: 1.25rem;
+    margin: 4rem;
+    max-height: 44rem;
+    max-width: 23rem;
+  }
+  
+  .contacts-header {
+    display: none;
+  }
+
+  .contacts-title {
+    display: flex;
+    justify-self: start;
+    align-self: flex-start;
+    margin-left: 2rem;
+  }
+}
+
+/* --------------------------- */
+/* ------ContactCard styling------- */
