@@ -1,13 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className='header-title'>connect</h1>
+        <Header/>
       </header>
+      <main>
+
+      </main>
+      <footer className='App-footer'>
+        footer 
+      </footer>
     </div>
   );
 }

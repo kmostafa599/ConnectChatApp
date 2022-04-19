@@ -1,0 +1,90 @@
+:root{
+  --turquoise: #03ccbb;
+  --ltBlue: #6c89f4;
+  --blue: #373759;
+  --backGround: #f4f5fb;
+  --dkBlue: #1d1d30;
+  --grey: #5f5f5f;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--backGround);
+  color: var(--white);
+}
+
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* .App {
+  display: grid; 
+  grid-template-columns: 1fr 0fr 0fr; 
+  grid-template-rows: 0.2fr 1.97fr 0.1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."
+    ". . ."
+    ". . ."; 
+} */
+
+/* ------header styling--------- */
+
+.App-header {
+  background-color: var(--dkBlue);
+  color: white;
+  width: 100%;
+  display: flex;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  position: fixed;
+  margin-top: 2.85rem;
+}
+
+
+.header-container {
+  display: flex;
+  margin-left: 1.5rem;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.header-logo{
+  margin-top: 0.25rem;
+}
+
+.header-logo svg {
+  width: 2rem;
+  padding: 0;
+  margin-left: 2.5rem;
+  height: 3rem;
+  align-self: center;
+}
+
+.header-title{
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+.ltBlue{
+  color: var(--ltBlue);
+}
+
+.tq{
+  color: var(--turquoise);
+}
+
+/* --------------------------- */
+/* ------footer styling------- */
+
+.App-footer{
+  background-color: var(--dkBlue);
+  width: 100%;
+}
