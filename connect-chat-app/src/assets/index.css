@@ -116,7 +116,6 @@ main {
 .homePage-wrapper {
   display: flex;
   /* margin-top: 3rem; */
-  border: 2px solid green;
   width: 100%;
 }
 
@@ -170,7 +169,6 @@ main {
 
   .pc-contacts, .pc-chatBox {
     display: flex;
-    border: 2px dotted red;
     /* align-content: flex-start; */
     border-radius: 1rem;
     /* justify-content: center; */
@@ -435,6 +433,12 @@ main {
     margin-top: 1rem;
     margin-left: 2rem;
   }
+
+  .chat-header p {
+    font-weight: 600;
+    font-size: 1em;
+    margin-left: 1rem;
+}
 
   .chat-box{
     height: 34.5rem;

@@ -3,8 +3,8 @@ import ContactCard from './ContactCard'
 import ContactsHeader from './ContactsHeader'
 function Contacts() {
 
-  //
-
+  //assign contact to chat with + set chatMode true
+  //recieve users via useSelector
   return (
     <div className='contacts-container'>
         <ContactsHeader/>
