@@ -10,10 +10,6 @@ function HomePage() {
         <div className='homePage-container-pc'>
             <Fragment>
                 <Contacts/>
-            </Fragment>
-            <Fragment>
-                <Contacts/>
-            </Fragment>
         </div>
       </Fragment>
   )
