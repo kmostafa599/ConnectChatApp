@@ -2,6 +2,7 @@ import { Avatar } from '@mui/material'
 import React from 'react'
 import { useFormik } from 'formik'
 import SendIcon from '@mui/icons-material/Send';
+import ChatHeader from './ChatHeader';
 function Chat() {
 
   const initialValues = {reply:''}
@@ -15,6 +16,7 @@ function Chat() {
 
   return (
     <div className='chatBox-container'>
+        <ChatHeader/>
         <div className='chat-header'>
             <Avatar/>
             <p>Contact's Name</p>

@@ -6,7 +6,7 @@ import {Toggler} from '../types/functions'
 function HomePage() {
 
     //mobile view - chat/contacts toggle
-    const [chatMode, setChatMode] = useState(false)
+    const [chatMode, setChatMode] = useState(true)
     const viewChat = () =>{
         setChatMode(true)
     }

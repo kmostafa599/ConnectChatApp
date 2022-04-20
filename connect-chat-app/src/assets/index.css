@@ -25,7 +25,7 @@ body {
 
 main {
   min-height: 45.2rem;
-  padding: 1rem 0.5rem;
+  /* padding: 1rem 0.5rem; */
   width: 100%;
 }
 
@@ -35,7 +35,7 @@ main {
   display: none;
 }
 
-@media (min-width: 700px){
+@media (min-width: 900px){
   
   .App {
     min-height: 41rem;
@@ -135,7 +135,16 @@ main {
   width: 100%;
 }
 
-@media (min-width: 700px){
+.mobile-chat {
+  display: flex;
+  width: 100%;
+}
+
+@media (min-width: 900px){
+
+  .homePage-wrapper{
+    margin-top: 1rem;
+  }
 
   .homePage-mobile, .mobile-contacts, .mobile-chat{
     display: none;
@@ -255,7 +264,7 @@ main {
 
 }
 
-@media (min-width: 700px){
+@media (min-width: 900px){
   .contacts-container {
     border-radius: 1.25rem;
     /* margin: 4rem; */
@@ -319,6 +328,9 @@ main {
   display: none;
 }
 
+/*-----------------------*/
+/*-----chat styling------*/
+
 
 .chatBox-container {
   display: flex;
@@ -326,12 +338,10 @@ main {
   color: black;
   justify-content: center;
   /* min-width: 40rem; */
-  background-color: white;
+  background-color: var(--backGround);
   border-radius: 1rem;
-  padding: 1rem;
   width: 100%;
   /* min-width: 29rem; */
-  padding: 0 1rem 1rem 1rem;
 }
 
 .chat-header {
@@ -344,8 +354,89 @@ main {
 }
 
 .chat-box {
+    display: flex;
+    flex-direction: column;
+    height: 35rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 0 1rem;
+    /* min-width: 30rem; */
+}
+.box-conversations{
+  list-style: none;
+}
+
+.box-conversations li{
+
+}
+
+.chat-input{
   display: flex;
-  flex-direction: column;
-  height: 37rem;
-  /* min-width: 30rem; */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-header{
+  display: none;
+}
+
+
+.chat-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.9rem;
+}
+
+.chat-input input {
+  border: none;
+  background-color: var(--backGround);
+  padding: 1rem;
+  color: black;
+  border-radius: 0.25rem;
+  margin: 0.5rem 0.5rem 1rem 0;
+  width: 68%;
+}
+
+.chat-send {
+    border: none;
+    border-radius: 0.25rem;
+    border: radius;
+    padding: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.chat-send span{
+  color: var(--ltBlue);
+}
+
+.header-contact-id {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-contact-id h1{
+  font-size: 1rem;
+  margin-left: 1rem;
+  padding: 1rem 0;
+}
+
+@media (min-width: 900px){
+  .chatBox-container{
+    background-color: white;
+  }
+
+  .chat-header {
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+
+  .chat-box{
+    height: 34.5rem;
+  }
 }
