@@ -136,7 +136,7 @@ main {
   overflow: hidden;
   overflow-y: scroll;
   direction: rtl;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 .contacts-list {
@@ -199,7 +199,7 @@ main {
 /* --------------------------- */
 /* ------ContactCard styling------- */
 
-.contactCard-avatar {
+.contactCard-avatar svg{
   width: 5rem;
   height: 5rem;
 }
@@ -213,8 +213,7 @@ main {
 }
 
 .contactCard-name {
-  margin-bottom: 2px;
-  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
   font-weight: 600;
 }
 
