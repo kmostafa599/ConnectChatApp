@@ -14,7 +14,7 @@ function App() {
         <HomePage/>
       </main>
       <footer className='App-footer'>
-        footer
+        footer bla bla bla
       </footer>
     </div>
   );
