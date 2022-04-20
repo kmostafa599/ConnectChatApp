@@ -22,7 +22,7 @@ function Chat() {
         <div className='chat-box'>
           <ul className='box-conversation'>
             <li >
-              hello there how do ?
+              hello there , how are you hope all is well , bla bla bla
             </li>
           </ul>
         </div>
