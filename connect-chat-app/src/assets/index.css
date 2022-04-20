@@ -109,7 +109,28 @@ main {
 /* --------------------------- */
 /* ------ChatPage styling------- */
 
+.homePage-container-mobile{
+  display: flex;
+}
 
+.homePage-container-pc{
+  display: none;
+}
+
+@media (min-width: 550px){
+
+  .homePage-container-mobile{
+    display: none;
+  }
+
+  .homePage-container-pc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
 
 /* --------------------------- */
 /* ------Contacts styling------- */
