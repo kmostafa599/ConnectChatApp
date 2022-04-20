@@ -14,6 +14,18 @@ function Contacts() {
             <li>
               <ContactCard/>
             </li>
+            <li>
+              <ContactCard/>
+            </li>
+            <li>
+              <ContactCard/>
+            </li>
+            <li>
+              <ContactCard/>
+            </li>
+            <li>
+              <ContactCard/>
+            </li>
           </ul>
         </div>
     </div>

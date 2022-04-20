@@ -24,33 +24,35 @@ body {
 
 
 main {
-  /* margin-top: 2rem; */
-  min-height: 49.2rem;
+  min-height: 45.2rem;
   padding: 1rem 0.5rem;
+  width: 100%;
 }
+
 
 
 .App-header{
   display: none;
 }
 
-@media (min-width: 550px){
-
+@media (min-width: 700px){
+  
   .App {
     min-height: 41rem;
   }
-
+  
   .App-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
   }
-
+  
   main {
     min-height: 49.5rem;
+    width: 100%;
   }
-
+  
   
 }
 /* ------header styling--------- */
@@ -109,26 +111,77 @@ main {
 /* --------------------------- */
 /* ------ChatPage styling------- */
 
-.homePage-container-mobile{
+
+
+.homePage-wrapper {
   display: flex;
+  /* margin-top: 3rem; */
+  border: 2px solid green;
+  width: 100%;
 }
 
-.homePage-container-pc{
+.homePage-pc{
   display: none;
 }
 
-@media (min-width: 550px){
+.homePage-mobile {
+  display: flex;
+  width: 100%;
+  /* padding: 0 1rem; */
+}
 
-  .homePage-container-mobile{
+.mobile-contacts{
+  display: flex;
+  width: 100%;
+}
+
+@media (min-width: 700px){
+
+  .homePage-mobile, .mobile-contacts, .mobile-chat{
     display: none;
   }
 
-  .homePage-container-pc{
+  .homePage-pc {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
   }
+
+  .homePage-pc{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .pc-contacts, .pc-chatBox {
+    display: flex;
+    border: 2px dotted red;
+    /* align-content: flex-start; */
+    border-radius: 1rem;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* width: 100%; */
+    /* justify-content: space-between; */
+    max-height: 44rem;
+    /* margin-top: 2rem; */
+    margin-right: 2rem;
+    /* min-width: 13rem; */
+  }
+
+  .pc-chatBox {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    justify-content: center;
+  }
+
+
 
 }
 
@@ -145,8 +198,8 @@ main {
   left: 0;
   right: 0;
   max-height: 46rem;
-  position: fixed;
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
+  width: 100%;
 }
 
 .contacts-title {
@@ -158,6 +211,10 @@ main {
   overflow-y: scroll;
   direction: rtl;
   /* padding: 1rem; */
+  /* height: 100%; */
+  width: 100%;
+  height: 46rem;
+  padding: 0.2rem;
 }
 
 .contacts-list {
@@ -165,6 +222,7 @@ main {
   scrollbar-color: var(--backGround) var(--ltBlue);
   text-align: left;
   padding-left: 0.2rem;
+  padding-right: 1rem;
 }
 
 .contacts-header {
@@ -178,8 +236,8 @@ main {
   display: flex;
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
-  position: fixed;
-  z-index: 6;
+  /* position: absolute; */
+  /* z-index: 6; */
   padding-left: 3rem;
   padding-top: 0.5rem;
   top: 0px;
@@ -197,13 +255,14 @@ main {
 
 }
 
-@media (min-width: 550px){
-  .contacts-container{
+@media (min-width: 700px){
+  .contacts-container {
     border-radius: 1.25rem;
-    margin: 4rem;
+    /* margin: 4rem; */
     max-height: 44rem;
-    max-width: 26rem;
-  }
+    /* max-width: 26rem; */
+    margin-top: 0;
+}
   
   .contacts-header {
     display: none;
@@ -254,4 +313,39 @@ main {
   margin-bottom: 1.7rem;
   margin-right: 0.3rem;
   color: var(--grey);
+}
+
+.hide{
+  display: none;
+}
+
+
+.chatBox-container {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  justify-content: center;
+  /* min-width: 40rem; */
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 100%;
+  /* min-width: 29rem; */
+  padding: 0 1rem 1rem 1rem;
+}
+
+.chat-header {
+  display: flex;
+  /* border: 2px solid green; */
+  /* padding: 1rem; */
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  height: 37rem;
+  /* min-width: 30rem; */
 }
