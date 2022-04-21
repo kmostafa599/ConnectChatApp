@@ -343,28 +343,27 @@ main {
 
 .chat-header {
   display: flex;
-  /* border: 2px solid green; */
-  /* padding: 1rem; */
   justify-content: flex-start;
   width: 100%;
   margin-top: 0.5rem;
 }
 
 .chat-box {
-    display: flex;
-    flex-direction: column;
-    height: 35rem;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding: 0 1rem;
-    /* min-width: 30rem; */
+  display: flex;
+  flex-direction: column;
+  height: 35rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 0 1rem;
+  /* min-width: 30rem; */
 }
+
 .box-conversations{
   list-style: none;
 }
 
 .box-conversations li{
-
+  list-style: none;
 }
 
 .chat-input{
