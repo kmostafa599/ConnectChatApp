@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Header from './Components/Header';
 import HomePage from './Pages/HomePage';
 
@@ -14,7 +13,7 @@ function App() {
         <HomePage/>
       </main>
       <footer className='App-footer'>
-        footer
+        footer bla bla bla
       </footer>
     </div>
   );
