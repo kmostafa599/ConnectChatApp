@@ -239,13 +239,12 @@ main {
   align-content: center;
   background-color: var(--dkBlue);
   color: white;
-  width: 89%;
+  width: 100%;
   display: flex;
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
   /* position: absolute; */
   /* z-index: 6; */
-  padding-left: 3rem;
   padding-top: 0.5rem;
   top: 0px;
 }
@@ -415,12 +414,17 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-left: 1rem;
 }
 
 .header-contact-id h1{
   font-size: 1rem;
   margin-left: 1rem;
   padding: 1rem 0;
+}
+
+.header-contact-id svg{
+  margin-left: 0.5rem;
 }
 
 @media (min-width: 900px){
