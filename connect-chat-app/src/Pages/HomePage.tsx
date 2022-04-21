@@ -6,7 +6,7 @@ import {Toggler} from '../types/functions'
 function HomePage() {
 
     //mobile view - chat/contacts toggle
-    const [chatMode, setChatMode] = useState(true)
+    const [chatMode, setChatMode] = useState(false)
     const viewChat = () =>{
         setChatMode(true)
     }
@@ -18,11 +18,13 @@ function HomePage() {
         <div className='homePage-mobile'>
             <div className={chatMode? 'hide' : 'mobile-contacts'}>
                 <Contacts
-                //   viewChat={viewChat}
+                  
                 />
             </div>
             <div className={chatMode? 'mobile-chat' : 'hide'}>
-                <Chat/>
+                <Chat
+                    // back={back}
+                />
             </div>
         </div>
         <div className='homePage-pc'>

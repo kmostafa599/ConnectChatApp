@@ -1,9 +1,11 @@
 import { Avatar } from '@mui/material'
-import React from 'react'
+import {useEffect, useState, useRef} from 'react'
 import { useFormik } from 'formik'
 import SendIcon from '@mui/icons-material/Send';
 import ChatHeader from './ChatHeader';
 function Chat() {
+  //the input field will change message content through the submit handler
+  //the chat window will be updated upon li click , to post the user.name, user.conversation, if user id === authedUser id ? className sent, : className recieved
 
   const initialValues = {reply:''}
   const formik = useFormik({
@@ -23,7 +25,13 @@ function Chat() {
         </div>
         <div className='chat-box'>
           <ul className='box-conversation'>
-            <li >
+            <li className='sent'>
+              hello there , how are you hope all is well , bla bla bla
+            </li>
+            <li className='sent'>
+              hello there , how are you hope all is well , bla bla bla
+            </li>
+            <li className='recieved' >
               hello there , how are you hope all is well , bla bla bla
             </li>
           </ul>

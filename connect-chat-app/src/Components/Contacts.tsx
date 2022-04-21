@@ -5,6 +5,8 @@ function Contacts() {
 
   //assign contact to chat with + set chatMode true
   //recieve users via useSelector
+  //state of the message content is to be passed to the cards to recieve the content that will change through the input field submit handler
+
   return (
     <div className='contacts-container'>
         <ContactsHeader/>
