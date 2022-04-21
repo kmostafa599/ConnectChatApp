@@ -3,7 +3,7 @@ import Contacts from '../Components/Contacts'
 import Chat from '../Components/Chat'
 import { boolean } from 'yup/lib/locale'
 import {Toggler} from '../types/functions'
-function HomePage() {
+function HomePage():JSX.Element {
 
     //mobile view - chat/contacts toggle
     const [chatMode, setChatMode] = useState(true)
@@ -22,7 +22,7 @@ function HomePage() {
                 />
             </div>
             <div className={chatMode? 'mobile-chat' : 'hide'}>
-                <Chat/>
+                <Chat />
             </div>
         </div>
         <div className='homePage-pc'>
