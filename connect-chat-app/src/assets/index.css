@@ -350,20 +350,21 @@ main {
 }
 
 .chat-box {
-    display: flex;
-    flex-direction: column;
-    height: 35rem;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding: 0 1rem;
-    /* min-width: 30rem; */
+  display: flex;
+  flex-direction: column;
+  height: 35rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 0 1rem;
+  /* min-width: 30rem; */
 }
+
 .box-conversations{
   list-style: none;
 }
 
 .box-conversations li{
-
+  list-style: none;
 }
 
 .chat-input{
