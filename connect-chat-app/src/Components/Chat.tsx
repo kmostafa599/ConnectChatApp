@@ -1,22 +1,53 @@
 import { Avatar } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useFormik } from 'formik'
 import SendIcon from '@mui/icons-material/Send';
 import ChatHeader from './ChatHeader';
-function Chat() {
+import {io} from "socket.io-client";
+import { send } from 'process';
+import { sendMessage } from '../api';
 
-  const initialValues = {reply:''}
+function Chat() {
+  const [yourID, setYourID] = useState();
+  const [messages, setMessages] = useState([]);
+  // const [message, setMessage] = useState("");
+  const [socket,setSocket] = useState(null)
+
+  
+  useEffect(()=>{
+    const socket = io('http://localhost:7070')
+
+    socket.on("your id", (id : string )=>{
+      setYourID(id)
+    })
+    socket.on("message",(message:string)=>{
+      receivedMessage(message);
+
+    })
+  },[])
+  function receivedMessage(message) {
+    setMessages((oldMsgs : string) => [...oldMsgs, message]);
+  }
+
+  const initialValues = {
+    reply:''
+  }
   const formik = useFormik({
 
-    initialValues,onSubmit: values => {
+    initialValues,
+    onSubmit: async values => {
+      await sendMessage(values.reply,values.userId)
+      // setMessages()
       console.log(values)
+      socket.emit("send message",values)
+
     }
 
   })
 
   return (
     <div className='chatBox-container'>
-        <ChatHeader/>
+        <ChatHeader />
         <div className='chat-header'>
             <Avatar/>
             <p>Contact's Name</p>

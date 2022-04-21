@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ContactCard from './ContactCard'
 import ContactsHeader from './ContactsHeader'
 function Contacts() {
-
+useEffect(()=>{
+  
+})
   //assign contact to chat with + set chatMode true
   //recieve users via useSelector
   return (
