@@ -264,6 +264,11 @@ main {
   border-bottom: 2px solid var(--backGround);
   padding-bottom: 0.5rem;
   margin-left: 4.5rem;
+  transition: all 0.5s linear;
+}
+
+.contacts-list li:hover, .contacts-list li:active{
+  background-image: var(--grey);
 }
 
 @media (min-width: 900px){

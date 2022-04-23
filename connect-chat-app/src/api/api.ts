@@ -1,7 +1,8 @@
 import axios from "axios";
 import { User } from "../types/User"
 
-const URL = "http://localhost:7000/"
+
+const URL = "http://localhost:/"
 
 const api = axios.create({baseURL: URL}); 
 
@@ -26,3 +27,5 @@ export const meAPI = async (token: string): Promise<User> => {
     });
     return response.data.user;
 }
+
+export const getConversation = (userId:string) => api.post('/conversations/', (userId))

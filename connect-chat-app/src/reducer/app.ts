@@ -4,7 +4,7 @@ import {AppStateType} from "../types/User";
 const initialState: AppStateType = {
     user: null,
     token: "",
-    conversation:[],
+    conversations:[],
 }
 
 export const appSlice = createSlice({
@@ -17,15 +17,14 @@ export const appSlice = createSlice({
         setToken: (state, { payload }) => {
             state.token = payload;
         },
-        getConversations: (state, { payload }) => {
-            state.conversation = [...state.conversation,payload]
+        setConversations: (state, { payload }) => {
+            state.conversations = payload;
         },
-        getUsers: (state, {payload}) => {
-
-        } 
+    
+        
     },
 });
 
 
 export default appSlice.reducer;
-export const { setUser , setToken, getConversations } = appSlice.actions;
+export const { setUser , setToken, setConversations } = appSlice.actions;
