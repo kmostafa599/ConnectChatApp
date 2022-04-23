@@ -19,7 +19,7 @@ export const appSlice = createSlice({
         },
         getConversations: (state, { payload }) => {
             state.conversation = [...state.conversation,payload]
-        }  
+        },
     },
 });
 
