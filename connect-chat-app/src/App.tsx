@@ -1,6 +1,7 @@
-import React from 'react';
+import {useEffect} from 'react';
 import Header from './Components/Header';
 import HomePage from './Pages/HomePage';
+
 
 
 function App() {
@@ -20,3 +21,4 @@ function App() {
 }
 
 export default App;
+
