@@ -6,10 +6,12 @@ import ChatHeader from './ChatHeader';
 import {io} from "socket.io-client";
 import { send } from 'process';
 import { sendMessage } from '../api';
-
+interface Provider {
+  message:string
+}
 function Chat() {
-  const [yourID, setYourID] = useState();
-  const [messages, setMessages] = useState([]);
+  const [yourID, setYourID] = useState<string>('');
+  const [messages, setMessages] = useState <Provider[]>([]);
   // const [message, setMessage] = useState("");
   const [socket,setSocket] = useState(null)
 
@@ -25,8 +27,8 @@ function Chat() {
 
     })
   },[])
-  function receivedMessage(message) {
-    setMessages((oldMsgs : string) => [...oldMsgs, message]);
+  function receivedMessage(message:string) {
+    setMessages((oldMsgs :<Provider[]>) =>   [...oldMsgs, message]) ;
   }
 
   const initialValues = {

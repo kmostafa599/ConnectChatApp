@@ -49,7 +49,7 @@ const SignUp = () => {
             localStorage.setItem("user",JSON.stringify(values))
         }
     })
-    return (
+    return (  
       <ThemeProvider theme={theme}>
             <Grid container component="main" sx={{ height: '100vh' }}>
               <CssBaseline />
