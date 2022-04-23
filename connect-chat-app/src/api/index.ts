@@ -27,4 +27,4 @@ export const meAPI = async (token: string): Promise<User> => {
     return response.data.user;
 }
 
-export const sendMessage = (content:string, userId:string) => api.post('/message/create',{content,userId}) 
+export const getConversation = (userId:string) => api.post('/conversations/', (userId))
