@@ -17,7 +17,7 @@ export const appSlice = createSlice({
         setToken: (state, { payload }) => {
             state.token = payload;
         },
-        getConversations: (state, { payload }) => {
+        setConversations: (state, { payload }) => {
             state.conversation = [...state.conversation,payload]
         },
     },
@@ -25,4 +25,4 @@ export const appSlice = createSlice({
 
 
 export default appSlice.reducer;
-export const { setUser , setToken, getConversations } = appSlice.actions;
+export const { setUser , setToken, setConversations } = appSlice.actions;
