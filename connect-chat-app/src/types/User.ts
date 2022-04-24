@@ -15,14 +15,8 @@ export type LoginRespone = {
     token: string;
 }
 
-// export type Conversation = {
-//     id: string,
-//     userI
-// }
-
  export type AppStateType = {
     user: User | null;
     token: string;
-    conversations:string[]
-
+    conversation:string[]
 }

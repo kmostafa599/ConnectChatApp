@@ -1,58 +1,64 @@
-import React, { useState, useEffect } from 'react'
+import React, {useEffect, useState} from 'react'
 import Contacts from '../Components/Contacts'
 import Chat from '../Components/Chat'
-import { boolean } from 'yup/lib/locale'
-import { Toggler } from '../types/functions'
-import {getConversation} from '../api'
+import { RootState } from '../reducer/store'
+import app, { setConversations } from '../reducer/app'
+import { getConversation } from '../api'
 import { useDispatch, useSelector } from 'react-redux'
-import {setConversations} from '../reducer/app'
-import {RootState} from '../reducer/store'
+// import { useAppDispatch, useAppSelector } from '../reducer/hooks'
 
-function HomePage () {
-
-    const [chatMode, setChatMode] = useState(false)
+function HomePage():JSX.Element {
+    const data = useSelector((state: RootState)=>state)
+    const authUser = data.app.user
+    const conversations = data.app.conversation
+    const [chatMode, setChatMode] = useState(true)
     const dispatch = useDispatch()
-    const viewChat = () => {
+
+    const viewChat = () =>{
         setChatMode(true)
     }
     const back = () => {
         setChatMode(false)
     }
-
-    const listConversations = async (userId:string) => {
+     const listConversations = async (userId:string) => {
         const res = await getConversation(userId)
         return res
         
     }
- 
+    
     useEffect(() => {
-        const response = listConversations(userId) //authedUuser
+        if (authUser){
+            const response = listConversations(authUser.id) //authedUuser
+        
         dispatch(setConversations(response))
+        }
+        
     }, [])
-
-    const conversations = useSelector((state:RootState)=>state)
-
 
     return (
         <div className='homePage-wrapper'>
             <div className='homePage-mobile'>
                 <div className={chatMode ? 'hide' : 'mobile-contacts'}>
                     <Contacts
-
+                        conversations={conversations}
                     />
                 </div>
                 <div className={chatMode ? 'mobile-chat' : 'hide'}>
                     <Chat
-                    // back={back}
+                        back={back}
                     />
                 </div>
             </div>
             <div className='homePage-pc'>
                 <div className='pc-contacts'>
-                    <Contacts />
+                    <Contacts 
+                        conversations={conversations}
+                    />
                 </div>
                 <div className='pc-chatBox'>
-                    <Chat />
+                    <Chat 
+                        back={back}
+                    />
                 </div>
             </div>
         </div>
